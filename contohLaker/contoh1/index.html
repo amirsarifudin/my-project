@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <script src="https://kit.fontawesome.com/fddf78b6ad.js" crossorigin="anonymous"></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav>
+        <h4><span id="list-a">[A]</span>mir Sarifudin</h4>
+        <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#portofolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+    </nav>
+    
+    <header id="header">
+        <div class="header-text">
+            <p>Desain Grafis</p>
+            <h1>Hi, I'm <span id="list-amir">Amir</span><br>Sarifudin from Indonesia</h1>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="gambar/jp1.jpg" alt="About Me">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Selamat Datang di portofolio saya, sit amet consectetur adipisicing elit. Ipsa soluta laboriosam ipsam, distinctio minus inventore beatae amet numquam maiores velit tempore, molestiae accusamus veritatis nihil. Tenetur culpa a magnam ratione.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Banner</span><br>Desain Grafis</li>
+                            <li><span>Web Development</span><br>Desain web/app</li>
+                            <li><span>App Development</span><br>Desain web/app</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Bakul</span><br>Desain web/app</li>
+                            <li><span>Web Development</span><br>Desain web/app</li>
+                            <li><span>App Development</span><br>Desain web/app</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Pengusaha</span><br>Desain web/app</li>
+                            <li><span>Web Development</span><br>Desain web/app</li>
+                            <li><span>App Development</span><br>Desain web/app</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Section -->
+    <section id="service">
+        <div class="container">
+            <h1 class="sub-title">Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <h2>Desain Grafis</h2>
+                    <p>Aku bisa buat desain banner, feed, logo dan sebagainya.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-car"></i>
+                    <h2>Editor</h2>
+                    <p>Aku bisa edit foto dan video agar menjadi lebih menarik dan keren.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h2>Cyber Security</h2>
+                    <p>Aku bisa mengamankan data dari para peretas.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portofolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="gambar/ojol1.png" alt="Ojek Online">
+                    <div class="layer">
+                        <h3>Ojek Online</h3>
+                        <p>Silahkan lihat media sosial saya.</p>
+                        <a href="#">Link</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="gambar/desain grafis.png" alt="Desain Grafis">
+                    <div class="layer">
+                        <h3>Desain Grafis</h3>
+                        <p>Silahkan lihat media sosial saya.</p>
+                        <a href="#">Link</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="gambar/programmer.png" alt="Programmer dan Cyber Security">
+                    <div class="layer">
+                        <h3>Programmer dan Cyber Security</h3>
+                        <p>Silahkan lihat media sosial saya.</p>
+                        <a href="#">Link</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="sertifikat">
+        <h1 class="sub-title">Certificates</h1>
+        <div class="sertifikatjpg">
+            <p>AWS Cloud</p>
+            <img src="sertifikat/serifikataws.png" alt="AWS Cloud Certificate">
+        </div>
+        <div class="sertifikatjpg">
+            <p>Pemograman Bahasa C</p>
+            <img src="sertifikat/sertifikatC.png" alt="C Programming Certificate">
+        </div>
+        <div class="sertifikatjpg">
+            <p>Content Creator</p>
+            <img src="sertifikat/sertifikatcontenC.jpg" alt="Content Creator Certificate">
+        </div>
+        <div class="sertifikatjpg">
+            <p>Desain Canva</p>
+            <img src="sertifikat/sertifikatdesaincanva.jpg" alt="Canva Design Certificate">
+        </div>
+        <div class="sertifikatjpg">
+            <p>Desain dari BBPLK</p>
+            <img src="sertifikat/sertifikatDesainbbplk.png" alt="BBPLK Design Certificate">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <div class="social-icons">
+                        <a class="fa-regular fa-envelope" href="#"></a>
+                        <a class="fa-brands fa-whatsapp" href="#"></a>
+                        <a class="fa-brands fa-x-twitter" href="#"></a>
+                        <a class="fa-brands fa-facebook-f" href="#"></a>
+                        <a class="fa-brands fa-instagram" href="#"></a>
+                        <a class="fa-brands fa-linkedin-in" href="#"></a>
+                    </div>
+                    <a href="gambar/test.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form id="contact-form" method="POST" action="/send-message">
+                        <input type="text" name="name" placeholder="Nama Kamu" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" rows="6" placeholder="Pesan" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 by Amir Sarifudin. All Rights Reserved.</p>
+        </div>
+    </section>
+
+    <script src="js.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+</body>
+</html>

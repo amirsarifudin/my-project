@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio profesional Amir Sarifudin - Web Developer dan Ahli Forensik">
+    <meta name="author" content="Amir Sarifudin">
+    <title>Amir Sarifudin - Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(to right, #1d3557, #457b9d);
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            position: absolute;
+            bottom: 30px;
+            left: 90px;
+            transform: translateX(-50%);
+        }
+        nav {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link {
+            color: #fff;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #a8dadc;
+        }
+        #about {
+            background: #f8f9fa;
+            margin-top: 0;
+        }
+        .card {
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .contact-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+        .contact-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1d3557;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+        .contact-item i {
+            font-size: 24px;
+            color: #1d3557;
+            margin-right: 15px;
+        }
+        .contact-item p {
+            margin: 0;
+            font-size: 16px;
+            word-wrap: break-word;
+        }
+        .contact-item a {
+            text-decoration: none;
+            color: #1d3557;
+            transition: color 0.3s;
+        }
+        .contact-item a:hover {
+            color: #457b9d;
+        }
+        footer {
+            background: linear-gradient(to right, #1d3557, #457b9d);
+        }
+        footer p {
+            margin: 0;
+        }
+        @media (max-width: 767px) {
+    header h1, header p {
+        font-size: 1.5rem;  /* Adjust font size if needed */
+    }
+
+    header .img-container {
+        margin-top: 20px;  /* Add spacing between text and image */
+    }
+
+    header img {
+        display: block;
+        margin: 0 auto;  /* Center image */
+        width: 100px;
+        height: 100px;
+    }
+
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+.navbar-nav .nav-link {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+ @media (max-width: 767px) {
+    header h1, header p {
+        font-size: 1.5rem;  /* Adjust font size if needed */
+    }
+
+    header .img-container {
+        margin-top: 20px;  /* Add spacing between text and image */
+    }
+
+    header img {
+        display: block;
+        margin: 0 auto;  /* Center image */
+        width: 100px;
+        height: 100px;
+    }
+
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+.navbar-nav .nav-link {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+@media (max-width: 450px) {
+    header h1, header p {
+        font-size: 1.5rem;  /* Adjust font size if needed */
+    }
+
+    header .img-container {
+        margin-top: 30px;  /* Add spacing between text and image */
+    }
+
+    header img {
+        display: block;
+        margin: 0 auto;  /* Center image */
+        width: 80px;
+        height: 80px;
+    }
+
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+.navbar-nav .nav-link {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+@media (max-width: 576px) {
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+.contact-item {
+    margin-bottom: 15px;
+}
+@media (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="py-5 text-center">
+        <h1>Building a Creative and Efficient Web</h1>
+        <p class="lead">PORTOFOLIO</p>
+        <div class="img-container">
+            <img src="Foto.jpg" alt="Foto Amir Sarifudin" class="portfolio-img">
+        </div>
+    </header>
+    
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Amir Sarifudin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifikat">Certificate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Skill">Skill</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About me</h2>
+            <p class="text-center">Hi! 👋 Welcome to my profile.Nice to meet you!<strong>My name is Amir</strong>, I am an independent web developer, web pentester, forensic and cyber security. I try my best to create high-quality content in my work. My passion in engineering is web development, forensics and data security. In addition, I continue to try my best to do my job and I enjoy learning to improve my skills in technology. Apart from engineering, I also love music and finding out the latest technology or data leaks. In my spare time, I study a lot while listening to music.
+        </div>
+    </section>
+
+    <section id="services" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Service</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <i class="fas fa-laptop-code fa-3x text-primary mb-3"></i>
+                    <h5>Website Development</h5>
+                    <p>Build creative and efficient websites for your business needs.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                    <h5>Web Security</h5>
+                    <p>Security audits and web forensics to protect your data.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-user-shield fa-3x text-primary mb-3"></i>
+                    <h5>Consultation</h5>
+                    <p>Providing the best solution for your website data security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Skill</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <i class="bi bi-code-slash fa-3x text-primary mb-3"></i>
+                    <h5>Backend</h5>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-window fa-3x text-primary mb-3"></i>
+                    <h5>FrontEnd</h5>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-clipboard2-pulse-fill fa-3x text-primary mb-3"></i>
+                    <h5>Digital Forensic Analyst</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifikat" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Certificate</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="c.png" class="card-img-top" alt="Web Marketplace">
+                        <div class="card-body">
+                            <h5 class="card-title">Dicoding Academy</h5>
+                            <p class="card-text">C language programming.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="aws.png" class="card-img-top" alt="Web Marketplace">
+                        <div class="card-body">
+                            <h5 class="card-title">Dicoding Academy</h5>
+                            <p class="card-text">Cloud Practitioner Essentials.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="jv.png" class="card-img-top" alt="Web Marketplace">
+                        <div class="card-body">
+                            <h5 class="card-title">Dicoding Academy</h5>
+                            <p class="card-text">javascript language programming.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="cc.jpg" class="card-img-top" alt="Web Marketplace">
+                        <div class="card-body">
+                            <h5 class="card-title">DPC PPMI Jakarta Barat</h5>
+                            <p class="card-text">WEBINAR BE AN EXPERT CONTENT CREATOR.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="desain.jpg" class="card-img-top" alt="Web Marketplace">
+                        <div class="card-body">
+                            <h5 class="card-title">DPC PPMI Jakarta Barat</h5>
+                            <p class="card-text">WEBINAR BASIC DESIGN DEVELOP CONTENT WITH CANVA.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="blk.png" class="card-img-top" alt="Web Marketplace">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">CERTIFICATE OF COMPETENCE.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Project Example</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="utama.png" class="card-img-top" alt="Web Marketplace">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Marketplace</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="kedua.png" class="card-img-top" alt="Web Marketplace">
+                        <div class="card-body">
+                            <h5 class="card-title">Login Marketplace</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="buy.png" class="card-img-top" alt="Web Marketplace">
+                        <div class="card-body">
+                            <h5 class="card-title">Buyer view in marketplace</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="login.png" class="card-img-top" alt="Web Marketplace">
+                        <div class="card-body">
+                            <h5 class="card-title">Univercity Login</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="hm.png" class="card-img-top" alt="Web Marketplace">
+                        <div class="card-body">
+                            <h5 class="card-title">Home</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="mhs.png" class="card-img-top" alt="Web Marketplace">
+                        <div class="card-body">
+                            <h5 class="card-title">Student</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="dsn.png" class="card-img-top" alt="Web Marketplace">
+                        <div class="card-body">
+                            <h5 class="card-title">Lecturer</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="Skill" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Tech Stack</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <i class="bi bi-filetype-php fa-3x text-primary mb-3"></i>
+                    <h5>PHP</h5>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-filetype-html fa-3x text-primary mb-3"></i>
+                    <h5>HTML</h5>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-filetype-css fa-3x text-primary mb-3"></i>
+                    <h5>CSS</h5>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-filetype-js fa-3x text-primary mb-3"></i>
+                    <h5>Java Script</h5>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-amazon fa-3x text-primary mb-3"></i>
+                    <h5>AWS Cloud</h5>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa-solid fa-c fa-3x text-primary mb-3"></i>
+                    <h5>C</h5>
+                </div>
+        </div>
+    </section>
+
+    <section id="Skill2" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Operating System</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <i class="fa-brands fa-windows fa-3x text-primary mb-3"></i>
+                    <h5>Windows</h5>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa-brands fa-ubuntu fa-3x text-primary mb-3"></i>
+                    <h5>Ubuntu</h5>
+                </div>
+                <div class="col-md-4">
+                    <i class="fab fa-linux fa-3x text-primary mb-3"></i>
+                    <h5>Kali Linux</h5>
+                </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contact</h2>
+            <div class="contact-item">
+                <i class="fas fa-user"></i>
+                <p>Amir Sarifudin</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p><a href="mailto:amirsarifudin960@gmail.com">amirsarifudin960@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Purwakarta</p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-instagram"></i>
+                <p><a href="https://instagram.com/cs_team.id" target="_blank">CS_team.id</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-x"></i>
+                <p><a href="https://twitter.com/Amir_srdn" target="_blank">Amir_srdn</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="bi bi-linkedin"></i>
+                <p><a href="https://www.linkedin.com/in/amir-sarifudin-476642276/" target="_blank">Amir Sarifudin</a></p>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="text-center text-white py-3">
+        <p>&copy; 2025 Amir Sarifudin. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

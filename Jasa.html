@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DesignElevate</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  padding: 20px 0;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cta-btn {
+  background: #fff;
+  color: #6a11cb;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.hero-buttons button {
+  margin: 0 10px;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #fff;
+  color: #6a11cb;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/* About Us */
+.about {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.feature {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+/* Services */
+.services {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.card {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+/* Portfolio */
+.portfolio {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project:hover .overlay {
+  opacity: 1;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.testimonial-carousel {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.testimonial {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+/* Pricing */
+.pricing {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.pricing-table {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.plan {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+/* Contact Us */
+.contact {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact input,
+.contact select,
+.contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  background: #6a11cb;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+</style>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">DesignElevate</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <button class="cta-btn">Get Started</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Transform Your Ideas into Stunning Digital Experiences</h1>
+      <p>We specialize in crafting modern websites, online portfolios, and professional job applications that stand out.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary">Start Your Project Today</button>
+        <button class="btn-secondary">Explore Our Work</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>Who We Are</h2>
+      <p>At PixelCraft Studio, we believe in the power of design to elevate your brand. With years of experience in web design, UI/UX, and digital branding, we create solutions tailored to your needs.</p>
+      <div class="features">
+        <div class="feature">
+          <h3>Modern Design</h3>
+          <p>Clean and sleek designs that captivate your audience.</p>
+        </div>
+        <div class="feature">
+          <h3>Responsive Layout</h3>
+          <p>Works seamlessly on all devices and screen sizes.</p>
+        </div>
+        <div class="feature">
+          <h3>User-Friendly</h3>
+          <p>Intuitive interfaces for an exceptional user experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <p>We offer a wide range of services to help you achieve your digital goals.</p>
+      <div class="service-cards">
+        <div class="card">
+          <h3>Website Design</h3>
+          <p>Modern, responsive, and SEO-friendly websites.</p>
+        </div>
+        <div class="card">
+          <h3>Online Portfolio</h3>
+          <p>Showcase your work with a sleek and professional portfolio.</p>
+        </div>
+        <div class="card">
+          <h3>Job Application Design</h3>
+          <p>Create impactful resumes and cover letters for online platforms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-carousel">
+        <div class="testimonial">
+          <img src="client1.jpg" alt="Client 1">
+          <h3>John Doe</h3>
+          <p>"PixelCraft Studio transformed my ideas into a stunning website. Highly recommend!"</p>
+        </div>
+        <div class="testimonial">
+          <img src="client2.jpg" alt="Client 2">
+          <h3>Jane Smith</h3>
+          <p>"Their portfolio design was exactly what I needed to showcase my work."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2>Affordable Packages for Every Need</h2>
+      <div class="pricing-table">
+        <div class="plan">
+          <h3>Basic Plan</h3>
+          <p>$299</p>
+          <ul>
+            <li>1-page website</li>
+            <li>Basic portfolio design</li>
+            <li>Email support</li>
+          </ul>
+          <button>Select Plan</button>
+        </div>
+        <div class="plan">
+          <h3>Standard Plan</h3>
+          <p>$499</p>
+          <ul>
+            <li>Multi-page website</li>
+            <li>Custom portfolio</li>
+            <li>Priority support</li>
+          </ul>
+          <button>Select Plan</button>
+        </div>
+        <div class="plan">
+          <h3>Premium Plan</h3>
+          <p>$899</p>
+          <ul>
+            <li>Full website design</li>
+            <li>Advanced portfolio & job application</li>
+            <li>Dedicated project manager</li>
+          </ul>
+          <button>Select Plan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Let’s Work Together</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Phone Number">
+        <select>
+          <option value="website">Website Design</option>
+          <option value="portfolio">Online Portfolio</option>
+          <option value="job-application">Job Application Design</option>
+        </select>
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 PixelCraft Studio. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script>
+    // Smooth scrolling for navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Carousel functionality for testimonials
+let currentIndex = 0;
+const testimonials = document.querySelectorAll('.testimonial');
+
+function showNextTestimonial() {
+  testimonials[currentIndex].style.display = 'none';
+  currentIndex = (currentIndex + 1) % testimonials.length;
+  testimonials[currentIndex].style.display = 'block';
+}
+
+setInterval(showNextTestimonial, 5000); // Change testimonial every 5 seconds
+</script>
+</html>

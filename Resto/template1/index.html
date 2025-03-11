@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko UMKM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand, .nav-link {
+            color:  rgba(0, 0, 0, 0.6) !important;
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: #d1ecf1 !important;
+        }
+
+        .hero-section {
+            background: url(bc.jpg);
+            background-size: cover;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .products {
+            padding: 50px 0;
+        }
+
+        .products h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: none;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .footer1 h5 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .footer1 p {
+            line-height: 1.6;
+        }
+
+        .footer1 .footer-link {
+            color: #dbe3e9;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer1 .footer-link:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .social-icons a {
+            color: #dbe3e9;
+            font-size: 1.8rem;
+            margin-right: 15px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .text-light {
+            color: #dbe3e9 !important;
+        }
+
+        .text-light:hover {
+            color: #ffffff !important;
+        }
+        .contact-info {
+    font-size: 0.9rem; /* Ukuran teks lebih kecil */
+    color: black; /* Warna teks hitam */
+    line-height: 1.8; /* Jarak antar baris */
+}
+
+.contact-item {
+    text-decoration: none;
+    color: black; /* Warna ikon dan teks */
+    display: inline-flex;
+    align-items: center; /* Ikon dan teks sejajar secara vertikal */
+    transition: color 0.3s ease; /* Efek hover */
+}
+
+.contact-item i {
+    margin-right: 8px; /* Spasi antara ikon dan teks */
+    font-size: 1.2rem; /* Ukuran ikon sedikit lebih besar dari teks */
+}
+
+.contact-item:hover {
+    color: gray; /* Warna saat hover */
+}
+.contact-form {
+    font-size: 0.9rem;
+    color: black;
+}
+
+.contact-form .form-label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: black;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    padding: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: gray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.contact-form button {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: black;
+    color: white;
+}
+        .footer2 {
+            background-color: #FAEBD7;
+            color:  rgba(0, 0, 0, 0.6) !important;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .footer2 a {
+            color: rgba(0, 0, 0, 0.6) !important;
+            text-decoration: none;
+        }
+
+        .footer2 a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Nama Toko Kamu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section" id="home">
+        <div class="text-center">
+            <h1>Selamat Datang di Nama Toko Kamu</h1>
+            <p>Produk terbaik dan berkualitas dengan harga terjangkau</p>
+        </div>
+    </div>
+
+    <!-- Produk Section -->
+    <div class="container products" id="products">
+        <h2>Produk Kami</h2>
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="bc2.jpg" class="card-img-top" alt="Produk 1">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Produk 1</h5>
+                                    <p class="card-text">Deskripsi singkat produk 1</p>
+                                    <p class="text-danger">Rp100.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="bc3.jpg" class="card-img-top" alt="Produk 2">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Produk 2</h5>
+                                    <p class="card-text">Deskripsi singkat produk 2</p>
+                                    <p class="text-danger">Rp150.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="bc.jpg" class="card-img-top" alt="Produk 3">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Produk 3</h5>
+                                    <p class="card-text">Deskripsi singkat produk 3</p>
+                                    <p class="text-danger">Rp200.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer1 -->
+    <footer id="contact" class="footer1 mt-5 py-4" style="background: none; border-top: 1px solid black; color: #000000;">
+        <div class="container">
+            <div class="row">
+                <!-- Tentang Kami -->
+                <div class="col-md-4 mb-4">
+                    <h5>Tentang Toko Kamu</h5>
+                    <p>
+                        DigitalSphere adalah platform terbaik untuk mencari produk elektronik berkualitas dengan harga terjangkau. 
+                        Kami memberikan penawaran terbaik untuk pelanggan kami!
+                    </p>
+                    <div class="contact-info">
+                        <a href="#" class="contact-item">
+                            <i class="bi bi-envelope"></i> SeblakHasseyo
+                        </a>
+                        <br>
+                        <a href="#" class="contact-item">
+                            <i class="bi bi-geo-alt"></i> Jl. Senopati Raya Blok A No 1
+                        </a>
+                    </div>                    
+                </div>
+                <!-- Contact Section -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Hubungi Kami</h5>
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="name" placeholder="Nama Anda">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email Anda">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Pesan</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Pesan Anda"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-dark w-100">Kirim</button>
+                    </form>
+                </div>
+                
+                <!-- Ikon Media Sosial -->
+                <div class="col-md-4 mb-4 text-md-end">
+                    <h5>Ikuti Kami</h5>
+                    <a href="#" class="text-grey me-3" style="font-size: 1.5rem;"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-grey me-3" style="font-size: 1.5rem;"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-grey me-3" style="font-size: 1.5rem;"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-grey me-3" style="font-size: 1.5rem;"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer2 -->
+    <footer class="footer2">
+        <p>&copy; 2025 Nama Toko Kamu. All Rights Reserved.</p>
+        <p>Gambar Hanya Sebagai Contoh dari https://unsplash.com/s/photos/landscape-food</p>
+        <a href="#home">Kembali ke Atas</a>
+    </footer>
+</body>
+</html>

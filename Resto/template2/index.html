@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko UMKM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: #333333 !important;
+        }
+
+        .nav-link {
+            color: #555555 !important;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            color: #007bff !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: url('bc.jpg') center center/cover no-repeat;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+        }
+
+        /* Produk Section */
+        .products {
+            padding: 60px 0;
+        }
+
+        .products h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333333;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .card-text {
+            font-size: 0.95rem;
+            color: #666666;
+        }
+
+        .text-danger {
+            font-weight: bold;
+        }
+
+        /* Footer Styling */
+        .footer1 {
+            background-color: #343a40;
+            color: #d6d8db;
+            padding: 40px 0;
+        }
+
+        .footer1 h5 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .footer1 a {
+            color: #d6d8db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer1 a:hover {
+            color: #ffffff;
+        }
+
+        .social-icons a {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #d6d8db;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .footer2 {
+            background-color: #f8f9fa;
+            color: #555555;
+            padding: 15px 0;
+            text-align: center;
+            border-top: 1px solid #eaeaea;
+        }
+
+        .footer2 a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer2 a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Nama Toko Kamu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section" id="home">
+        <div>
+            <h1>Selamat Datang di Nama Toko Kamu</h1>
+            <p>Produk terbaik dan berkualitas dengan harga terjangkau</p>
+        </div>
+    </div>
+
+    <!-- Produk Section -->
+    <div class="container products" id="products">
+        <h2>Produk Kami</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="bc2.jpg" class="card-img-top" alt="Produk 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Produk 1</h5>
+                        <p class="card-text">Deskripsi singkat produk 1</p>
+                        <p class="text-danger">Rp100.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="bc3.jpg" class="card-img-top" alt="Produk 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Produk 2</h5>
+                        <p class="card-text">Deskripsi singkat produk 2</p>
+                        <p class="text-danger">Rp150.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="bc.jpg" class="card-img-top" alt="Produk 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Produk 3</h5>
+                        <p class="card-text">Deskripsi singkat produk 3</p>
+                        <p class="text-danger">Rp200.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Tentang Kami</h5>
+                    <p>DigitalSphere adalah platform terbaik untuk mencari produk elektronik berkualitas.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5><i class="bi bi-geo-alt"></i> Alamat</h5>
+                    <p>Jl. Senopati Raya Blok A No.1, Jakarta, Indonesia</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <h5>Ikuti Kami</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="footer2">
+        <p>&copy; 2025 Nama Toko Kamu. All Rights Reserved.</p>
+        <a href="#home">Kembali ke Atas</a>
+    </footer>
+</body>
+</html>
